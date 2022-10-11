@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="./js/app.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="calculator-grid">
+        <div class="calculator-display">
+          <div class="input-display"></div>
+          <div class="answer-display"></div>
+        </div>
+
+        <button class="left-bracket" data-type="(">(</button>
+        <button class="right-bracket" data-type=")">)</button>
+        <button class="clear-all">C</button>
+        <button class="delete-char">
+          <i class="fas fa-backspace"></i>
+        </button>
+
+        <button class="operation" data-type="^">^</button>
+        <button class="operation" data-type="^2">x²</button>
+        <button class="operation" data-type="√">
+          <i class="fas fa-square-root-alt"></i>
+        </button>
+        <button class="operation" data-type="÷">
+          <i class="fas fa-divide"></i>
+        </button>
+
+        <button class="digit">7</button>
+        <button class="digit">8</button>
+        <button class="digit">9</button>
+        <button class="operation" data-type="×">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <button class="digit">4</button>
+        <button class="digit">5</button>
+        <button class="digit">6</button>
+        <button class="operation" data-type="﹣">
+          <i class="fas fa-minus"></i>
+        </button>
+
+        <button class="digit">1</button>
+        <button class="digit">2</button>
+        <button class="digit">3</button>
+        <button class="operation" data-type="﹢">
+          <i class="fas fa-plus"></i>
+        </button>
+
+        <button class="sign" data-type="⁻">±</button>
+        <button class="digit">0</button>
+        <button class="dot" data-type=".">∙</button>
+        <button class="equals">
+          <i class="fas fa-equals"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

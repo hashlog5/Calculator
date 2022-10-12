@@ -1,4 +1,4 @@
-export class Calculator {
+export default class Calculator {
   constructor(inputDisplay, answerDisplay) {
     this.inputDisplay = inputDisplay;
     this.answerDisplay = answerDisplay;

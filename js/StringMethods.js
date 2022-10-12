@@ -152,7 +152,7 @@ String.prototype.getInfix = function () {
   let token;
   let nextToken;
 
-  //* Append Implicit Multiplication //
+  //! Append Implicit Multiplication
   for (let i = 0; i < infix.length - 1; i++) {
     token = infix[i];
     nextToken = infix[i + 1];

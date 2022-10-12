@@ -1,6 +1,6 @@
 :root {
   --calc-bg-color: #fcb31b;
-  --calc-border-color: black;
+  --calc-border-color: #000;
 
   --display-height: 120px;
   --display-border-color: rgba(255, 255, 255, 0.8);
@@ -25,39 +25,42 @@
 }
 
 body {
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
   background: linear-gradient(to right, #00aaff, #00ff6c);
 }
 
 .calculator {
   padding: 20px;
-  background-color: var(--calc-bg-color);
+
   border: 3.5px solid var(--calc-border-color);
   border-radius: 15px;
+  background-color: var(--calc-bg-color);
 }
 
 .calculator-grid {
   display: grid;
   grid-template-columns: repeat(4, var(--btn-length));
   grid-template-rows: var(--display-height) repeat(6, var(--btn-length));
-  grid-gap: 5px;
+  gap: 5px;
 }
 
 .calculator-display {
   grid-column: span 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   margin-bottom: 15px;
   padding: 0 10px;
 
-  background-color: var(--display-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   border: 2.5px solid var(--display-border-color);
   border-radius: 7px;
+  background-color: var(--display-bg-color);
 
   white-space: nowrap;
 }
@@ -83,17 +86,16 @@ body {
 }
 
 button {
-  background-color: var(--btn-bg-color);
   border: 1.75px solid var(--btn-border-color);
   border-radius: 50%;
-
+  background-color: var(--btn-bg-color);
   font-size: 1.25rem;
   font-weight: 700;
 }
 
 button:hover {
-  background-color: var(--btn-hover-bg-color);
   outline: 2.5px solid var(--btn-hover-outline-color);
+  background-color: var(--btn-hover-bg-color);
 }
 
 button[data-type='^'] {

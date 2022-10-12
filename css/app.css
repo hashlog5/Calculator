@@ -1,15 +1,15 @@
 :root {
   --calc-bg-color: #fcb31b;
-  --calc-border-color: #000;
+  --calc-border-color: black;
 
-  --display-height: 30vmin;
+  --display-height: 120px;
   --display-border-color: rgba(255, 255, 255, 0.8);
   --display-bg-color: rgba(0, 0, 0, 0.85);
 
   --input-color: #60a07f;
   --answer-color: rgba(255, 255, 255, 0.85);
 
-  --btn-length: 10vmin;
+  --btn-length: 50px;
   --btn-border-color: rgba(0, 0, 0, 0.85);
   --btn-bg-color: rgba(255, 255, 255, 0.75);
   --btn-hover-bg-color: rgba(255, 255, 255, 0.9);
@@ -25,55 +25,51 @@
 }
 
 body {
-  height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
+  height: 100vh;
   background: linear-gradient(to right, #00aaff, #00ff6c);
 }
 
 .calculator {
-  margin-bottom: 10px;
-  padding: 3px 7px;
-
-  border: 3.5px solid var(--calc-border-color);
-  border-radius: 12px;
+  padding: 20px;
   background-color: var(--calc-bg-color);
+  border: 3.5px solid var(--calc-border-color);
+  border-radius: 15px;
 }
 
 .calculator-grid {
   display: grid;
   grid-template-columns: repeat(4, var(--btn-length));
   grid-template-rows: var(--display-height) repeat(6, var(--btn-length));
-  gap: 7px;
+  grid-gap: 5px;
 }
 
 .calculator-display {
-  margin-bottom: 15px;
-  padding: 0 10px;
-
   grid-column: span 4;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-bottom: 15px;
+  padding: 0 10px;
 
+  background-color: var(--display-bg-color);
   border: 2.5px solid var(--display-border-color);
   border-radius: 7px;
-  background-color: var(--display-bg-color);
 
   white-space: nowrap;
 }
 
-.input-display {
+#input-display {
   color: var(--input-color);
   font-size: 1.25rem;
 
   overflow-x: scroll;
 }
 
-.answer-display {
+#answer-display {
   color: var(--answer-color);
   font-size: 1.75rem;
   font-weight: 700;
@@ -81,15 +77,16 @@ body {
   overflow-x: scroll;
 }
 
-.input-display::-webkit-scrollbar,
-.answer-display::-webkit-scrollbar {
+#input-display::-webkit-scrollbar,
+#answer-display::-webkit-scrollbar {
   display: none;
 }
 
 button {
+  background-color: var(--btn-bg-color);
   border: 1.75px solid var(--btn-border-color);
   border-radius: 50%;
-  background-color: var(--btn-bg-color);
+
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -101,11 +98,13 @@ button:hover {
 
 button[data-type='^'] {
   padding-top: 7px;
+
   font-size: 1.75rem;
 }
 
 button[data-type='^2'] {
   padding-left: 5px;
+
   font-size: 1.5rem;
 }
 

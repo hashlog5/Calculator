@@ -18,8 +18,8 @@ const rightBracket = rightBracketBtn.getAttribute('data-type');
 const dot = dotBtn.getAttribute('data-type');
 const negSign = signBtn.getAttribute('data-type');
 
-const inputDisplay = document.querySelector('.input-display');
-const answerDisplay = document.querySelector('.answer-display');
+const inputDisplay = document.getElementById('input-display');
+const answerDisplay = document.getElementById('answer-display');
 const calculator = new Calculator(inputDisplay, answerDisplay);
 
 const leftScrollValue = 999999999999;

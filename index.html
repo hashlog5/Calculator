@@ -26,16 +26,14 @@
     <div class="calculator">
       <div class="calculator-grid">
         <div class="calculator-display">
-          <div class="input-display"></div>
-          <div class="answer-display"></div>
+          <div id="input-display"></div>
+          <div id="answer-display"></div>
         </div>
 
         <button class="left-bracket" data-type="(">(</button>
         <button class="right-bracket" data-type=")">)</button>
+        <button class="delete-char"><i class="fas fa-backspace"></i></button>
         <button class="clear-all">C</button>
-        <button class="delete-char">
-          <i class="fas fa-backspace"></i>
-        </button>
 
         <button class="operation" data-type="^">^</button>
         <button class="operation" data-type="^2">x²</button>
@@ -70,9 +68,7 @@
         <button class="sign" data-type="⁻">±</button>
         <button class="digit">0</button>
         <button class="dot" data-type=".">∙</button>
-        <button class="equals">
-          <i class="fas fa-equals"></i>
-        </button>
+        <button class="equals"><i class="fas fa-equals"></i></button>
       </div>
     </div>
   </body>
